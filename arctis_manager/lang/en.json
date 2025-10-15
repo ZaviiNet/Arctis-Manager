@@ -1,0 +1,81 @@
+{
+    "app": {
+        "settings_label": "Settings",
+        "settings_window_title": "Arctis Manager"
+    },
+    
+    "sections": {
+        "anc": "ANC",
+        "battery": "Battery",
+        "bluetooth": "Bluetooth",
+        "device_status": "Device status",
+        "microphone": "Microphone",
+        "power_management": "Power management",
+        "wireless": "Wireless",
+        "wireless_mode": "Wireless mode"
+    },
+
+    "settings": {
+        "mic_volume": "Volume",
+        "mic_side_tone": "Side tone",
+        "mic_gain": "Gain",
+        "mic_led_brightness": "LED brightness",
+
+        "wireless_mode":"Wireless mode",
+
+        "pm_shutdown": "Shutdown after"
+    },
+
+    "setting_values": {
+        "mic_volume_muted": "Muted",
+        "mic_gain_low": "Low",
+        "mic_gain_high": "High",
+        "mic_side_tone_none": "None",
+        "mic_side_tone_high": "High",
+
+        "perc_10": "10%",
+        "perc_100": "100%",
+
+        "pm_shutdown_disabled": "Disabled",
+        "pm_shutdown_60_minutes": "60 minutes",
+
+        "wireless_mode_speed": "Speed",
+        "wireless_mode_range": "Range"
+    },
+
+    "device_status_values": {
+        "anc": { "transparent": "transparent" },
+        "connection": {
+            "connected": "connected", "disconnected": "disconnected",
+            "online": "online", "offline": "offline",
+            "cable_charging": "charging (cable)"
+        },
+        "db": { "-12db": "-12db" },
+        "mic_status": { "muted": "muted", "unmuted": "unmuted" },
+        "on_off": { "on": "on", "off": "off" },
+        "pairing": {"paired": "paired", "not_paired": "not paired", "paired_offline": "paired (offline)"},
+        "wireless_mode": { "range": "range", "speed": "speed" }
+    },
+
+    "menu": {
+        "headset_power_status": "Headset power status: {status}",
+
+        "headset_battery_charge": "Battery status: {status}%",
+        "charge_slot_battery_charge": "Charge slot battery status: {status}%",
+
+        "wireless_pairing": "Wireless: {status}",
+
+        "wireless_mode": "Wireless mode: {mode}",
+
+        "transparent_noise_cancelling_level": "Transparent noise cancelling level: {status}%",
+        "noise_cancelling": "Noise cancelling: {status}",
+
+        "mic_status": "Mic status: {status}",
+        "mic_led_brightness": "Mic LED brightness: {status}%",
+
+        "bluetooth_powerup_state": "Bluetooth turned on: {status}",
+        "bluetooth_power_status": "Bluetooth status: {status}",
+        "bluetooth_auto_mute": "Bluetooth mute: {status}",
+        "bluetooth_connection": "Bluetooth connection: {status}"
+    }
+}
