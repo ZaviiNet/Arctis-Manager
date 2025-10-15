@@ -40,5 +40,5 @@ modules:
       - install -Dm644 systemd/arctis-manager.service /app/etc/systemd/user/arctis-manager.service
     sources:
       - type: git
-        url: https://github.com/ZaviiNet/glorious_codes.git
-        tag: 'v1.4.0' # Use the latest stable tag
+        url: url: https://github.com/ZaviiNet/Arctis-Manager.git
+        branch: main
