@@ -1,0 +1,3 @@
+PyQt packages are not supported by flapak-pip-generator
+However, there is a BaseApp for PyQt available, that you should use
+Visit https://github.com/flathub/com.riverbankcomputing.PyQt.BaseApp for more information
