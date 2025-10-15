@@ -1,0 +1,44 @@
+app-id: io.github.glorious_codes.ArctisManager
+runtime: org.freedesktop.Platform
+runtime-version: '23.08'
+sdk: org.freedesktop.Sdk
+command: arctis-manager
+finish-args:
+  # Needed for USB device access
+  - --device=all
+  # Allow talking to system services
+  - --share=ipc
+  - --socket=fallback-x11
+  - --socket=wayland
+modules:
+  # First, install python dependencies using flatpak-pip-generator
+  - name: python-dependencies
+    buildsystem: simple
+    build-commands:
+      # Install pip and then the generated requirements file
+      - pip3 install --prefix=/app --no-cache-dir -r requirements.json
+    sources:
+      # This file will be generated in the next step
+      - type: file
+        path: requirements.json
+
+  # Now, build the main application
+  - name: arctis-manager
+    buildsystem: simple
+    build-commands:
+      # Run pyinstaller to create the binaries
+      - pyinstaller --noconfirm arctis-manager.spec
+      - pyinstaller --noconfirm arctis-manager-launcher.spec
+
+      # Install all the necessary files into the /app directory
+      - install -Dm755 dist/arctis-manager /app/bin/arctis-manager
+      - install -Dm755 dist/arctis-manager-launcher /app/bin/arctis-manager-launcher
+      - install -Dm644 ArctisManager.desktop /app/share/applications/io.github.glorious_codes.ArctisManager.desktop
+      - install -Dm644 arctis_manager/images/steelseries_logo.svg /app/share/icons/hicolor/scalable/apps/io.github.glorious_codes.ArctisManager.svg
+      
+      # Install the systemd user service
+      - install -Dm644 systemd/arctis-manager.service /app/etc/systemd/user/arctis-manager.service
+    sources:
+      - type: git
+        url: https://github.com/ZaviiNet/glorious_codes.git
+        tag: 'v1.4.0' # Use the latest stable tag
