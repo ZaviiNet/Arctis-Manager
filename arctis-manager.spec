@@ -10,7 +10,7 @@ a = Analysis(
     datas=[
     ('arctis_manager/images/steelseries_logo.svg', 'arctis_manager/images/'),
     ('arctis_manager/lang/*.json', 'arctis_manager/lang/'),
-    ('/usr/lib64/python3.11/site-packages/PyQt6/Qt6/plugins/platforms', 'PyQt6/Qt6/plugins/platforms')
+    ('/usr/lib64/python3.13/site-packages/PyQt6/Qt6/plugins/platforms', 'PyQt6/Qt6/plugins/platforms')
     ],
     hiddenimports=hiddenimports,
     hookspath=[],
